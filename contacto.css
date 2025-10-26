@@ -1,0 +1,233 @@
+/* 🧩 Estilos específicos para la página de Contacto de DJQ MOTORS */
+
+/* ==== CONTENEDOR PRINCIPAL DE INFORMACIÓN Y MAPA ==== */
+.contacto-grid-container {
+  max-width: 1200px; /* Aumentado el ancho máximo */
+  margin: 4rem auto;
+  gap: 3rem; 
+  padding: 0 1rem;
+}
+
+/* Contenedor del Mapa (Iframe) */
+.contacto-mapa-container {
+  /* La clase 'card' de Picnic se encarga del estilo base (fondo, sombra) */
+  background-color: #ffffff; /* Fondo claro para el mapa */
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.contacto-mapa-container h3 {
+  color: rgb(17, 64, 109); 
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.8em; 
+}
+
+.contacto-mapa-container iframe {
+  width: 100%;
+  height: 400px; 
+  border: 0;
+  border-radius: 8px;
+}
+
+/* ==== CONTENEDOR DE LA INFORMACIÓN DETALLADA (DERECHA) ==== */
+.contacto-info-container {
+  /* Usaremos 'card' en el HTML para el estilo base */
+  background-color: rgb(17, 64, 109); /* Azul fuerte de la marca DJQ */
+  color: white;
+  padding: 2.5rem; 
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.contacto-info-container h3 {
+  font-size: 2em;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 15px;
+}
+
+.contacto-info-container p {
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+/* Estilos de los elementos de información (teléfono, correo, etc.) */
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 15px;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+  padding-bottom: 15px;
+}
+
+.info-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.info-item .icon {
+  font-size: 2.5em; 
+  line-height: 1;
+  color: #00b2d4; /* Azul/Cyan para resaltar */
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.info-item .text strong {
+  display: block;
+  font-size: 1.1em;
+  margin-bottom: 3px;
+  color: #fff;
+}
+
+.info-item .text p {
+  margin: 0;
+  font-size: 0.95em;
+  color: #e0f0fa;
+  text-align: left;
+}
+
+
+/* ==== SECCIÓN DEL FORMULARIO (FULL WIDTH) ==== */
+.formulario-section {
+    max-width: 800px; /* Ancho cómodo para un formulario */
+    margin: 4rem auto;
+    padding: 0 1rem;
+}
+
+.formulario-card-picnic {
+    /* La clase 'card' de Picnic se encarga del estilo base */
+    padding: 2.5rem; /* Más relleno */
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-card-picnic h3 {
+    text-align: center;
+    font-size: 2.2em;
+    color: rgb(17, 64, 109);
+    margin-bottom: 0.5rem;
+}
+
+.formulario-card-picnic .subtitle {
+    text-align: center;
+    color: #555;
+    margin-bottom: 2rem;
+    font-style: italic;
+    font-size: 1.1em;
+}
+
+.formulario-card-picnic label {
+    font-weight: 600;
+    color: #333;
+    margin-top: 1rem;
+    display: block;
+}
+
+/* Campos de entrada mejorados */
+.formulario-card-picnic input[type="text"],
+.formulario-card-picnic input[type="email"],
+.formulario-card-picnic input[type="tel"],
+.formulario-card-picnic select,
+.formulario-card-picnic textarea {
+    border: 1px solid #ccc;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    padding: 10px;
+}
+
+.formulario-card-picnic input:focus,
+.formulario-card-picnic textarea:focus,
+.formulario-card-picnic select:focus {
+    border-color: #00b2d4;
+    box-shadow: 0 0 5px rgba(0, 178, 212, 0.5);
+}
+
+
+/* ==== FOOTER MEJORADO ==== */
+footer {
+    background-color: rgb(17, 64, 109);
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 1em;
+    margin-top: 4rem;
+    border-top: 5px solid #00b2d4; /* Línea de color de marca para destacar */
+}
+footer p {
+    margin: 5px 0;
+}
+
+/* ============================================== */
+/* ==== MODO OSCURO PARA PÁGINA DE CONTACTO (MEJOR CONTRASTE) ==== */
+/* ============================================== */
+
+body.oscuro .contacto-mapa-container {
+    background-color: #1a3a5a; /* Fondo más oscuro para la tarjeta del mapa */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+body.oscuro .contacto-mapa-container h3 {
+    color: #00b2d4; /* Título en azul claro */
+}
+
+body.oscuro .contacto-info-container {
+    background-color: #0f2e4d; /* Fondo oscuro que contrasta con el mapa */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+body.oscuro .contacto-info-container h3 {
+    color: #fff;
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+
+body.oscuro .info-item .icon {
+    background-color: rgba(0, 178, 212, 0.1); /* Fondo del icono en oscuro */
+}
+
+body.oscuro .formulario-card-picnic {
+    background-color: #12385a; /* Fondo oscuro para la tarjeta del formulario */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+body.oscuro .formulario-card-picnic h3 {
+    color: #00b2d4; /* Título del formulario en azul claro */
+}
+
+body.oscuro .formulario-card-picnic .subtitle {
+    color: #c0d0e0;
+}
+
+body.oscuro .formulario-card-picnic label {
+    color: #e0f0fa;
+}
+
+body.oscuro .formulario-card-picnic input,
+body.oscuro .formulario-card-picnic select,
+body.oscuro .formulario-card-picnic textarea {
+    background-color: #0f2e4d; /* Fondo oscuro para inputs */
+    color: #f5f5f5;
+    border-color: #1b4b74;
+}
+
+body.oscuro .formulario-card-picnic input:focus,
+body.oscuro .formulario-card-picnic select:focus,
+body.oscuro .formulario-card-picnic textarea:focus {
+    border-color: #009ec2;
+    box-shadow: 0 0 5px rgba(0, 158, 194, 0.7);
+}
+
+/* Media Query para responsividad de la grilla */
+@media screen and (max-width: 900px) {
+    .contacto-grid-container {
+        display: block; /* Desactiva flex en pantallas pequeñas */
+    }
+    .contacto-mapa-container, .contacto-info-container {
+        margin-bottom: 2rem;
+    }
+}

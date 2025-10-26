@@ -1,0 +1,699 @@
+/* 🎨 Ajustes generales para DJQ MOTORS */
+body {
+   overflow-x: hidden;
+      margin: 0.6%; 
+      padding: 20px;
+      background-color: #f5f5f5; /* Fondo claro por defecto */
+      border: 10px solid #f5f5f5;
+      color: #333; /* Texto por defecto en modo claro */
+      transition: background-color 0.3s, color 0.3s;
+     
+}
+#cabecera {
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
+   background-color: rgb(17, 64, 109);
+   padding: 25px;
+   color: whitesmoke;
+   text-align: center;
+   margin: 0%;
+   border: 2px;
+}
+
+#cabecera img{
+
+   border-radius: 4px; 
+   max-width: 200px; 
+   height: auto; 
+}
+main {
+   /* Eliminado padding excesivo */
+}
+
+/* Sección de contenido */
+
+
+section{
+   display: flex;
+   justify-content: left;
+   align-items: left;
+   gap: 1px; 
+   
+      width: 97%; 
+      height: 500px;
+      margin: 20px;
+      padding: 15px;
+      margin-top: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Para pantallas medianas (tabletas) */
+@media screen and (max-width: 768px) {
+   .image-container {
+      flex-direction: column; 
+      gap: 10px; 
+   }
+   nav ul li a {
+      font-size: 1.5em; 
+   }
+}
+
+/* Para pantallas pequeñas (móviles) */
+@media screen and (max-width: 480px) {
+   .image-container img {
+      max-width: 100px; 
+   }
+   nav ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+   nav ul li {
+      margin: 10px 0;
+   }
+    /* El carrusel se desliza por una sola imagen y se ocultan los controles grandes en móvil */
+    .carousel-item {
+        min-width: 90vw;
+        width: 90vw;
+        margin-right: 5vw;
+    }
+    .carousel-controls {
+        display: none; /* Ocultar controles en móvil para deslizar con el dedo */
+    }
+}
+
+/* Media Queries: adaptabilidad */
+@media screen and (max-width: 1200px) {
+   header h1 {
+       font-size: 28px;
+   }
+}
+
+@media screen and (max-width: 768px) {
+   header h1 {
+       font-size: 24px;
+   }
+
+   main {
+       padding: 10px;
+   }
+
+   section {
+       margin-top: 15px;
+   }
+}
+
+@media screen and (max-width: 480px) {
+   header h1 {
+       font-size: 20px;
+   }
+
+   section {
+       padding: 10px;
+   }
+}
+h1 {
+   margin: 0;
+   font-size: 6em;
+   color: #f5f5f5;
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   
+}
+hr {
+   margin: 10px ;
+   border: 2px solid #ccc;
+}
+
+/* CORRECCIÓN: Centrado de los logos */
+.image-container {
+   display: flex; 
+   justify-content: center; /* Centra los logos horizontalmente */
+   align-items: center;
+   flex-wrap: wrap; /* Permite que los logos salten de línea en pantallas pequeñas */
+   max-width: 1200px; /* Limita el ancho para un mejor control */
+   margin: 20px auto; /* Centra el contenedor completo */
+   
+}
+
+/* iconos */
+.image-container img {
+   border-radius: 4px; 
+   max-width: 160px; 
+   height: auto; 
+   margin: 30px; /* Reduje el margin a 30px para que quepan más */
+   
+}
+
+
+ h2 {
+ margin: 10px auto;
+  font-family: Arial, Helvetica, sans-serif;
+   font-size: 2.2em;
+  text-align: center;
+  color: #f5f5f5;
+  margin:40px;
+  
+}
+
+
+aside{
+   width: 25%; 
+   background-color: #f5f5f5;
+   padding: 20px;
+   border-left: solid 1px #ccc;
+   
+}
+/* Estilo anterior de section img eliminado, ahora gestionado por la galería */
+
+.clearfix{
+clear:both;
+
+}
+nav {
+   background-color: rgb(17, 64, 109); 
+   border-radius: 8px; 
+   padding: 10px 20px; 
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+   text-align: center; 
+   margin: 20px 0; 
+}
+
+/* Estilos de los elementos de la lista del menú */
+nav ul {
+   list-style-type: none; 
+   padding: 0;
+   margin: 0;
+}
+
+/* Estilos para los elementos de lista */
+nav ul li {
+   display: inline-block; 
+   margin: 0 15px; 
+}
+
+/* Estilos para los enlaces dentro del menú */
+nav ul li a {
+   color: #f5f5f5; 
+   text-decoration: none; 
+   font-family: 'Segoe UI', Arial, sans-serif; 
+   font-size: 2em; 
+   padding: 10px 60px; 
+   border-radius: 5px; 
+   transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+/* Efectos al pasar el ratón sobre el enlace */
+nav ul li a:hover {
+   background-color: #007f9e; 
+   transform: scale(1.05); 
+}
+
+/* Línea decorativa debajo del enlace */
+nav ul li a:after {
+   content: ''; 
+   display: block;
+   width: 0;
+   height: 2px;
+   background: #f5f5f5; 
+   transition: width 0.3s ease; 
+   margin-top: 5px;
+}
+
+/* Expansión de la línea al pasar el ratón */
+nav ul li a:hover:after {
+   width: 90%; 
+}
+.imagenes{
+
+   border-radius: 5px; 
+   max-width: 800px; 
+   height: 300px; 
+
+}
+a{
+
+   color :#f5f5f5;
+   font-size: large;
+   font-family: Arial, Helvetica, sans-serif;
+   
+}
+
+
+/* Pie de página (Clase 'footer' eliminada, se usa el tag 'footer' directamente) */
+footer {
+   background-color: #007f9e;
+   color: white;
+   text-align: center;
+   padding: 10px;
+   margin-top: 10px; /* Ajuste para evitar error tipográfico */
+   margin: 0%;
+   position: relative;
+   width: 99%;
+   bottom: 0;
+}
+
+
+
+#content {
+   display: flex; 
+   align-items: center; 
+   justify-content: center; /* Centrar el contenido */
+   padding: 0 20px; /* Padding para evitar que toque los bordes */
+   
+}
+/* Eliminado estilo antiguo de article */
+
+/* ==== ESTILO ARTICLE MEJORADO (informacion-detallada) ==== */
+.informacion-detallada {
+    max-width: 1200px;
+    margin: auto;
+    padding: 3rem; 
+    background-color: #ffffff; /* Fondo claro por defecto */
+    color: #333; 
+    border-radius: 15px;
+    
+    display: flex; 
+    gap: 3rem; 
+    align-items: center; 
+    flex-wrap: wrap; 
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.informacion-detallada .informacion-contenido {
+    flex: 2; 
+    min-width: 300px;
+}
+
+.informacion-detallada .informacion-imagen {
+    flex: 1; 
+    text-align: center;
+    min-width: 250px;
+}
+
+.informacion-detallada .informacion-imagen img {
+    max-width: 100%;
+    height: 350px; /* Altura fija para que la imagen cuadre */
+    object-fit: cover; /* Asegura que la imagen cuadre sin distorsión */
+    border-radius: 10px;
+   
+}
+
+.informacion-detallada h2 {
+    font-size: 2.8em; 
+    color: #0d47a1; 
+    margin: 0 0 1rem 0;
+    text-align: left;
+}
+
+
+.informacion-detallada p {
+    font-size: 1.4em; 
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+
+/* ==== ESTILO GALERÍA (galeria-seccion) - AJUSTADO PARA SER VERTICAL Y SIN SOMBRA ==== */
+.galeria-seccion {
+    max-width: 800px; /* Reducido para mejor aspecto vertical */
+    margin: 4rem auto;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.galeria-seccion h2 {
+    font-size: 3em;
+    color: #0d47a1;
+    margin-bottom: 2rem;
+}
+
+.galeria-grid {
+    display: flex; /* Cambiado a flex */
+    flex-direction: column; /* Apila los elementos verticalmente */
+    gap: 30px; /* Aumento del espacio entre elementos */
+    align-items: center; /* Centra los items si son más estrechos que el contenedor */
+    justify-content: center;
+}
+
+.galeria-item {
+    position: relative;
+    overflow: hidden;
+    width: 100%; /* El item ocupa todo el ancho de galeria-grid (800px) */
+    max-width: 600px; /* Limitar el ancho de cada item para que no sean demasiado grandes */
+    border-radius: 10px;
+    box-shadow: none; /* ELIMINADO: Quitar el sombreado de la caja */
+    transition: none; /* ELIMINADO: Quitar la transición de efecto */
+}
+
+.galeria-item:hover {
+    transform: none; /* ELIMINADO: Quitar la transformación al pasar el ratón */
+    box-shadow: none; /* ELIMINADO: Quitar el sombreado al pasar el ratón */
+}
+
+.galeria-item img {
+    width: 110%;
+    height: 350px;
+    object-fit: cover; /* Asegura que la imagen llene el espacio sin distorsión (Cuadren) */
+    display: block;
+    transition: none; /* ELIMINADO: Quitar la transición de filtro */
+    filter: none; /* ELIMINADO: Quitar el filtro de brillo */
+    border-radius: 15px; /* Mantener bordes redondeados en la imagen */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Agregado sombreado sutil a la imagen */
+}
+
+.galeria-item:hover img {
+    filter: none; /* ELIMINADO: Quitar el filtro de brillo al pasar el ratón */
+}
+
+/* ==== NUEVA ROTONDA / SLIDER DE FOTOS (CARRUSEL) ==== */
+.carousel-section {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.carousel-section h2 {
+    font-size: 2.5em;
+    color: #0d47a1;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.carousel-container {
+    overflow: hidden; /* Oculta las imágenes que no están visibles */
+    position: relative;
+   
+    
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Animación de deslizamiento */
+    width: fit-content;
+}
+
+.carousel-item {
+    min-width: 300px; /* Ancho base del elemento */
+    width: 300px; 
+    margin-right: 10px; 
+    flex-shrink: 0;
+    cursor: grab;
+}
+.carousel-item:last-child {
+    margin-right: 0; 
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover; 
+    display: block;
+}
+
+.carousel-controls {
+    margin-top: 20px;
+}
+
+.carousel-controls button {
+    background-color: #007f9e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.carousel-controls button:hover {
+    background-color: #00b2d4;
+    transform: scale(1.05);
+}
+
+
+/* ==== CONTENEDOR FLEXIBLE PARA FORMULARIO E IMAGEN ==== */
+.contacto-wrapper {
+    max-width: 1550px;
+    margin: 4rem auto;
+    padding: 0 130px;
+    display: flex;
+    justify-content: center; /* Centrar el grupo completo */
+    align-items: flex-start; /* Alinear arriba para el formulario y la imagen */
+    gap: 40px;
+    flex-wrap: wrap; /* Permite que los elementos se apilen en móvil */
+}
+
+.formulario-container {
+   /* Estilos del formulario existentes, con ajuste de margin */
+   flex: 1 1 500px; /* Crece y se achica, con un ancho base de 500px */
+   padding: 30px;
+   border-radius: 10px;
+   background-color: rgb(17, 64, 109); 
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   margin: 0; 
+}
+
+.form-image-container {
+    flex: 1 1 300px; /* Crece y se achica, con un ancho base de 300px */
+    text-align: center;
+}
+
+.form-image-container img {
+    max-width: 100%;
+    height: 550px; /* Altura fija para que cuadre con el formulario */
+    object-fit: cover; /* Asegura que la imagen cuadre */
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+/* RESPONSIVE PARA EL NUEVO CONTENEDOR */
+@media (max-width: 900px) {
+    .contacto-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .formulario-container,
+    .form-image-container {
+        width: 100%;
+        max-width: 600px; 
+    }
+}
+/* Encabezado del formulario */
+.formulario-container h3 {
+   font-family: 'Segoe UI', Roboto, sans-serif;
+   text-align: center;
+   font-size: 2em;
+   color: whitesmoke;
+   margin-bottom: 20px;
+}
+
+/* Elementos del formulario */
+form {
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+}
+
+label {
+   font-size: 1.2em;
+   color: #e0f0fa; 
+   font-weight: bold;
+}
+
+input, textarea, select { /* Se añade select */
+   padding: 15px;
+   border: 1px solid #ccc;
+   border-radius: 8px;
+   font-size: 1.1em;
+   background-color: #f5f5f5;
+   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+   transition: box-shadow 0.3s ease;
+}
+
+input:focus, textarea:focus {
+   outline: none;
+   box-shadow: 0 0 8px rgba(0, 127, 158, 0.8); 
+   border-color: #007f9e;
+}
+
+/* Botón llamativo */
+button {
+   padding: 12px ;
+   background-color: #007f9e; 
+   color: white;
+   border: none;
+   border-radius: 8px;
+   cursor: pointer;
+   font-size: 1.2em;
+   transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+   background-color: #00b2d4; 
+   transform: scale(1.03); 
+}
+.video-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 20px 0; 
+}
+
+/* Video responsivo */
+.video-container video {
+   max-width: 95%; 
+   height: auto; 
+   border-radius: 10px; 
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+   
+}
+/* Redes sociales */
+.image-socials {
+   text-align: center;
+   margin-top: 10px;
+ }
+ 
+ .image-socials img {
+   width: 100px;
+   height: auto;
+   margin-bottom: 20px;
+   padding: 30px;
+ }
+ 
+ .social-links {
+   background-color: #065b8b;
+   padding: 1px;
+  
+   color: #ffffff;
+   font-size: 2.1em;
+ }
+/* Ajuste de separación del formulario */
+
+
+/* ==== BOTÓN MODO CLARO/OSCURO ==== */
+.modo-container {
+    text-align: right;
+    margin: 1rem 30px;
+}
+
+#modo-toggle {
+    font-size: 1.1em;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background-color: #0d47a1;
+    color: white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#modo-toggle:hover {
+    background-color: #1565c0;
+    transform: scale(1.05);
+}
+
+
+/* 🌙 MODO OSCURO GLOBAL (body.oscuro) */
+body.oscuro {
+    background-color: #0b1825;
+    color: #f5f5f5;
+    border-color: #0b1825;
+}
+
+body.oscuro #cabecera {
+    background-color: #0f2e4d;
+}
+
+body.oscuro #cabecera h1,
+body.oscuro #cabecera h2 {
+    color: #e0f0fa;
+}
+
+body.oscuro nav {
+    background-color: #12385a;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+body.oscuro nav ul li a,
+body.oscuro a {
+    color: #f5f5f5;
+}
+
+body.oscuro footer {
+    background-color: #0f2e4d;
+}
+
+body.oscuro .formulario-container {
+    background-color: #12385a;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+body.oscuro .formulario-container label {
+    color: #e0f0fa;
+}
+
+body.oscuro .formulario-container input,
+body.oscuro .formulario-container textarea {
+    background-color: #0f2e4d;
+    color: #f5f5f5;
+    border-color: #1b4b74;
+}
+
+body.oscuro button {
+    background-color: #009ec2;
+}
+
+body.oscuro button:hover {
+    background-color: #00b2d4;
+}
+
+/* MODO OSCURO: ARTICLE MEJORADO */
+body.oscuro .informacion-detallada {
+    background-color: #1a3a5a; /* Fondo azul oscuro */
+    color: #e0f0fa; /* Texto blanco/claro */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+body.oscuro .informacion-detallada h2 {
+    color: #00b2d4; /* Título en azul claro */
+}
+
+body.oscuro .informacion-detallada p {
+    color: #c0d0e0;
+}
+
+/* MODO OSCURO: GALERÍA Y CARRUSEL */
+body.oscuro .galeria-seccion h2,
+body.oscuro .carousel-section h2 {
+    color: #00b2d4;
+}
+
+body.oscuro .galeria-item {
+    box-shadow: none; /* MODO OSCURO: Quitar el sombreado de la caja */
+}
+
+body.oscuro .galeria-item img,
+body.oscuro .carousel-item img {
+    filter: brightness(0.75); /* Imágenes más oscuras en modo oscuro */
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1); /* Sombra sutil en la imagen */
+}
+
+body.oscuro .galeria-item:hover img {
+    filter: brightness(0.75); /* MODO OSCURO: Mantener el filtro de brillo */
+}
+
+/* MODO OSCURO: NUEVO CONTENEDOR DE IMAGEN */
+body.oscuro .form-image-container img {
+    filter: brightness(0.75);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+}
+
+/* MODO OSCURO: REDES SOCIALES */
+body.oscuro .social-links {
+    background-color: #0e2b44;
+}

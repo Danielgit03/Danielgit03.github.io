@@ -1,0 +1,165 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Encabezado */
+.header {
+  background-color: #0b3b66;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+.header h1 {
+  font-size: 2.9rem;
+}
+
+.header p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+/* Navegación */
+.nav {
+  display: flex;
+  justify-content: center;
+  background-color: #154c79;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.nav a:hover {
+  background-color: #0b3b66;
+}
+
+/* Sección de marcas */
+.marcas {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #f8f9fa;
+}
+
+.marcas h2 {
+  color: #0b3b66;
+  margin-bottom: 1.5rem;
+}
+
+.logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.logos img {
+  width: 120px;
+  transition: transform 0.3s;
+}
+
+.logos img:hover {
+  transform: scale(1.1);
+}
+
+/* Galería */
+.galeria {
+  padding: 2rem;
+  text-align: center;
+}
+
+.contenedor-galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.tarjeta {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 380px;
+  padding: rem;
+  transition: transform 0.3s;
+}
+
+.tarjeta:hover {
+  transform: scale(1.05);
+}
+
+.tarjeta img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.tarjeta h3 {
+  color: #0b3b66;
+  margin: 0.8rem 0 0.4rem;
+}
+
+/* Servicios */
+.servicios {
+  background-color: #f0f4f7;
+  padding: 2rem;
+}
+
+.servicios h2 {
+  text-align: center;
+  color: #0b3b66;
+  margin-bottom: 1rem;
+}
+
+.servicios ul {
+  list-style-type: square;
+  width: 80%;
+  margin: 0 auto;
+  color: #333;
+  line-height: 1.8;
+}
+
+/* Información */
+.info {
+  text-align: center;
+  padding: 2rem;
+  background-color: #ffffff;
+  color: #333;
+}
+
+.info h2 {
+  color: #0b3b66;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+/* Pie de página */
+.footer {
+  background-color: #0b3b66;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .nav a {
+    padding: 0.8rem 1rem;
+  }
+
+  .logos img {
+    width: 90px;
+  }
+
+  .tarjeta {
+    width: 90%;
+  }
+}

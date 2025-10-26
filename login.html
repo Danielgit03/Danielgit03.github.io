@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | DJQ MOTORS</title>
+
+  <!-- 🎨 Framework Picnic CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
+
+  <!-- 🧩 Estilos personalizados -->
+  <link rel="stylesheet" href="login.css">
+
+  <style>
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: linear-gradient(135deg, #081624, #0f2e4d);
+        color: #f5f5f5;
+      }
+      nav {
+        background-color: #12385a;
+      }
+      .login-box {
+        background-color: #16293f;
+        color: #fff;
+      }
+      input {
+        background-color: #0f2e4d;
+        color: #fff;
+      }
+      .btn-login {
+        background-color: #009ec2;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 🔝 Barra de navegación -->
+  <nav class="menu-container">
+    <ul>
+      <li><a href="index.html" class="active">Inicio</a></li>
+      <li><a href="informacion.html">Información</a></li>
+      <li><a href="contacto.html">Contáctanos</a></li>
+    </ul>
+  </nav>
+
+
+
+  <!-- 💻 Contenedor de Login -->
+  <div class="login-container">
+    <div class="login-box">
+      <h1>DJQ MOTORS</h1>
+      <h2>Iniciar Sesión</h2>
+      <p class="descripcion">
+        Accede a tu cuenta para explorar las mejores motocicletas 2025, realizar reservas,
+        gestionar tus pedidos y mantenerte al día con nuestras novedades.
+      </p>
+
+      <form id="formLogin" action="#" method="post" novalidate>
+        <div class="input-group">
+          <label for="usuario">Usuario</label>
+          <input type="text" id="usuario" name="usuario" placeholder="Ingresa tu usuario">
+          <small class="error"></small>
+        </div>
+
+        <div class="input-group">
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña">
+          <small class="error"></small>
+        </div>
+
+        <button type="submit" class="btn-login primary">Ingresar</button>
+      </form>
+
+      <p class="registro">
+        ¿No tienes cuenta? <a href="#">Regístrate aquí</a>
+      </p>
+    </div>
+  </div>
+
+    <!-- 🌓 Botón modo oscuro/claro -->
+  <div class="modo-container">
+    <button id="modo-toggle" class="primary">🌙 Modo oscuro</button>
+  </div>
+
+  <script src="login.js"></script>
+
+  <!-- 🌗 Script para cambiar modo oscuro -->
+ <script>
+    const btnModo = document.getElementById('modo-toggle');
+    const body = document.body;
+
+    // 1. Lógica para determinar el modo inicial:
+    //    - Si hay preferencia guardada en localStorage, usarla.
+    //    - Si no, usar la preferencia del sistema operativo.
+    const prefiereOscuroSistema = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    let modoInicial = localStorage.getItem('modo');
+
+    if (modoInicial === null) {
+        modoInicial = prefiereOscuroSistema ? 'oscuro' : 'claro';
+    }
+
+    // 2. Aplicar el modo inicial
+    if (modoInicial === 'oscuro') {
+        body.classList.add('oscuro');
+        btnModo.textContent = '☀️ Modo claro';
+    } else {
+        body.classList.remove('oscuro');
+        btnModo.textContent = '🌙 Modo oscuro';
+    }
+
+    // 3. Listener para el botón
+    btnModo.addEventListener('click', () => {
+        body.classList.toggle('oscuro');
+        if (body.classList.contains('oscuro')) {
+            localStorage.setItem('modo', 'oscuro');
+            btnModo.textContent = '☀️ Modo claro';
+        } else {
+            localStorage.setItem('modo', 'claro');
+            btnModo.textContent = '🌙 Modo oscuro';
+        }
+    });
+
+    // Corrección: El enlace "Inicio" tiene la clase 'active' por error, la quitamos.
+    document.querySelector('.menu-container a[href="DJQ MOTORS.html"]').classList.remove('active');
+</script>
+
+</body>
+</html>

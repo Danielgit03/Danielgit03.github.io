@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda Yamaha</title>
+  <link rel="stylesheet" href="Yamaha.css" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+   <header id="cabecera">
+        <div class="overlay">
+            <a href="DJQ MOTORS.htmL" target="_blank">
+            <img src="imagenes/motosport-yamaha.svg" alt="Logo BMW" class="logo"> </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="financiar.html">Financia tu Moto</a></li>
+                    <li><a href="informacion.html">servicios</a></li>
+                    <li><a href="informacion.html">Más Información</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="video-container">
+            <video loop autoplay muted src="videos/Yamaha YZF-R9.mp4" type="video/mp4"></video>
+        </div>
+        <h1> MOTOCICLETAS </h1>
+        <p>MOTOS EN UNA SOLA CALIDAD</p>
+        <hr>
+    </header>
+
+  <!-- Contenedor principal -->
+  <div class="main-content">
+    <aside>
+      <h2>Categorías</h2>
+      <ul>
+        <li><a href="index.html">SPORT</a></li>
+        <li><a href="index.html">SUPER SPORT</a></li>
+        <li><a href="index.html">TODO TERRENO</a></li>
+        <li><a href="index.html">AVENTURA</a></li>
+      </ul>
+    </aside>
+
+
+    
+
+
+
+      
+
+   
+
+
+    <!-- 🏍️ Modelos a comprar -->
+    <section class="moto-listing">
+      <h2>Modelos Yamaha Disponibles</h2>
+      <div class="moto-row">
+        <div class="moto-item" data-id="Y1" data-name="Yamaha R9 2025" data-price="65500000">
+          <img src="imagenes/r9.jpg" alt="Yamaha R9">
+          <h3>Yamaha R9 2025</h3>
+          <p>$65.500.000</p>
+          <button class="add-to-cart">Añadir al carrito</button>
+        </div>
+        <div class="moto-item" data-id="Y2" data-name="Tracer 900 GT 2024" data-price="72000000">
+          <img src="imagenes/tracer9GT.jpg" alt="Tracer 900 GT">
+          <h3>Tracer 900 GT 2024</h3>
+          <p>$72.000.000</p>
+          <button class="add-to-cart">Añadir al carrito</button>
+        </div>
+        <div class="moto-item" data-id="Y3" data-name="R15 V4 2025" data-price="14900000">
+          <img src="imagenes/R15-8.webp" alt="Yamaha R15 V4">
+          <h3>Yamaha R15 V4 2025</h3>
+          <p>$14.900.000</p>
+          <button class="add-to-cart">Añadir al carrito</button>
+        </div>
+      </div>
+
+      <div class="moto-row">
+        <div class="moto-item" data-id="Y4" data-name="MT-07 2024" data-price="50000000">
+          <img src="imagenes/mt07.png" alt="Yamaha MT-07">
+          <h3>Yamaha MT-07 2024</h3>
+          <p>$50.000.000</p>
+          <button class="add-to-cart">Añadir al carrito</button>
+        </div>
+        <div class="moto-item" data-id="Y5" data-name="MT-09 V4 2024" data-price="58900000">
+          <img src="imagenes/mt09-info-sky.webp" alt="Yamaha MT-09">
+          <h3>Yamaha MT-09 V4 2024</h3>
+          <p>$58.900.000</p>
+          <button class="add-to-cart">Añadir al carrito</button>
+        </div>
+        <div class="moto-item" data-id="Y6" data-name="YZ 450 2025" data-price="60400000">
+          <img src="imagenes/MT03.webp" alt="Yamaha YZ 450">
+          <h3>Yamaha MT 03 2025</h3>
+          <p>$30.400.000</p>
+          <button class="add-to-cart">Añadir al carrito</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- 🛒 Icono del carrito flotante -->
+  <div id="cart-icon">🛒<span id="cart-count">0</span></div>
+
+  <!-- 🛍️ Ventana flotante del carrito -->
+  <div id="cart-window">
+    <h2>🛍️ Tu Carrito Yamaha</h2>
+    <ul id="cart-items"></ul>
+    <p>Total: $<span id="cart-total">0</span></p>
+    <button id="clear-cart">Vaciar</button>
+    <button id="buy-cart">Comprar</button>
+  </div>
+
+  <!-- 💳 Modal de compra -->
+  <div id="buy-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>💳 Finalizar Compra</h2>
+
+      <form id="buy-form">
+        <label for="nombre">👤 Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="direccion">🏠 Dirección de envío:</label>
+        <input type="text" id="direccion" name="direccion" required>
+
+        <label for="tarjeta">💳 Número de tarjeta:</label>
+        <input type="text" id="tarjeta" name="tarjeta" maxlength="16" required>
+
+        <button type="submit">Confirmar Compra</button>
+      </form>
+
+      <div id="resumen-compra" class="resumen" style="display:none;"></div>
+    </div>
+  </div>
+
+     <div class="content-kawa">
+
+        <h1>   No seas seguidor, marca tú el camino.
+            Juntos crecemos superándonos a nosotros mismos. Aquí fuera te convertirás en la mejor versión que has
+             sido nunca. Conduces por delante. Tomas cada pendiente y cada curva con suavidad.unete al yamaha team racing y viviras cada curva como si fueras en un cohete entre dos ruedas no necesitas mas solo una yamaha confiabilidad y velocidad en una unica motocicleta </h1>
+         <center><img src="imagenes/mt10.jpg"></center>
+        <p> La MT 10 SP la nueva naked de alta cilindrada lista para dar nuevas emociones.</p>
+
+       <center> <video  controls loop autoplay muted  src="videos/2024 Yamaha MT-09： Unleash your Darkness.mp4"  ></video></center>
+
+    </div>
+
+
+  <!-- formulario -->
+
+    <div class="image-specs">
+
+      
+        <img src="imagenes/r1m-1.webp" alt="Imagen Moto BMW">
+    
+        <div class="contact-form">
+            <h3>Contáctanos</h3>
+            <form action="#" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+    <div class="image-socials">
+       
+        <div class="social-links">
+            <h3 style="padding: 30px;">Síguenos en nuestras redes:</h3>
+            <!-- Agregar iconos o enlaces de redes sociales aquí -->
+            <a href="https://wa.me/123456789" target="_blank">
+                <img src="imagenes/whastaap.webp" alt="WhatsApp"> </a>
+
+                <a href="https://www.instagram.com/daniel.ostos.9699/?hl=es" target="_blank">
+                    <img src="imagenes/Instagram.jpg" alt="Instagram">
+                </a>
+
+
+                <a href="https://www.facebook.com/daniel.ostos.9699/" target="_blank">
+                    <img src="imagenes/Facebook.webp" alt="Facebook">
+
+                        <p> WhatsApp |  Facebook | Instagram </p>
+        </div>
+    </div>
+
+
+    <!-- Pie de página -->
+    <footer>
+       <p>© 2025 DJQ MOTORS | Todos los derechos reservados</p>
+    <p>📍 Ocaña, Norte de Santander | 📞 320 123 4567 | ✉️ contacto@djqmotors.com</p>
+    </footer>
+
+
+ 
+
+  <script src="script.js"></script>
+</body>
+</html>
