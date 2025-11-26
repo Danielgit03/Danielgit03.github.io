@@ -2,7 +2,7 @@
 
 Este proyecto es una simulación avanzada de una tienda virtual de motocicletas, especializada en las marcas **BMW**, **Yamaha**, y **Honda**. El objetivo es mostrar un catálogo completo con información detallada y ofrecer funcionalidades clave de un eCommerce como financiación y carrito de compras, todo con un diseño limpio y moderno.
 
-## 🌟 Características y Funcionalidades
+##  Características y Funcionalidades
 
 El proyecto incluye las siguientes secciones y características interactivas:
 
@@ -25,13 +25,13 @@ El proyecto incluye las siguientes secciones y características interactivas:
 * **Estilos Personalizados:** Archivos CSS dedicados (`bmw.css`, `Yamaha.css`, `honda.css`) para capturar la esencia visual de cada marca.
 * **Contenido Multimedia:** Uso de videos de fondo en el encabezado (`<video loop autoplay muted>`) para un impacto visual dinámico.
 
-## 🛠️ Tecnologías y Librerías
+##  Tecnologías y Librerías
 
 | Categoría | Tecnología/Librería | Propósito |
 | :--- | :--- | :--- |
 | **Estructura** | HTML5 | Base de todo el contenido y las páginas. |
 | **Estilos Base** | Picnic CSS | Framework ligero para la grilla y estilos de componentes (botones, formularios). |
 | **Estilos Específicos** | CSS3 (Puro) | Estilos de marca, diseño de galería de motos, y la implementación de **Media Queries**. |
-| **Interactividad** | JavaScript (ES6+) | Lógica de negocio (carrito, login, validación). |
+| **Interactividad** | JavaScript | Lógica de negocio (carrito, login, validación al ingresar). |
 | **Documentos** | jspdf.js | Generación de PDFs para cotizaciones. |
 
